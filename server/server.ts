@@ -24,7 +24,7 @@ app.use("/api/upload", uploadRouter);
 app.use("/api/orders", orderRouter);
 
 app.use(
-    "/inngest",
+    "/api/inngest",
     serve({
         client: inngest,
         functions,
