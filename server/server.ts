@@ -7,6 +7,9 @@ import authRouter from "./routes/authRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import uploadRouter from "./routes/uploadRoutes.js";
 import orderRouter from "./routes/orderRoutes.js";
+import addressRouter from "./routes/addressRoutes.js";
+import deliveryPartnerRouter from "./routes/deliveryPartnerRoutes.js";
+import adminRouter from "./routes/adminRoutes.js";
 
 const app = express();
 
@@ -30,6 +33,10 @@ app.use(
         functions,
     })
 );
+app.use('/api/addresses', addressRouter)
+app.use('/api/admin', adminRouter)
+app.use('/api/delivery', deliveryPartnerRouter)
+
 
 // Error handler
 app.use(
